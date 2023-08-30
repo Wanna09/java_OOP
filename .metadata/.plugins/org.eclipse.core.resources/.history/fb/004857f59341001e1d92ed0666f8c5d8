@@ -1,0 +1,15 @@
+package OOPAbstract;
+
+public class Salary extends Employee{
+
+	double Salary;
+
+	@Override
+	public void computePay() {
+		// TODO Auto-generated method stub
+		
+	}
+		
+	
+
+}

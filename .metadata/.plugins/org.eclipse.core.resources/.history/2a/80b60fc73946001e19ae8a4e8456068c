@@ -1,0 +1,51 @@
+package GUI;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Point;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class JFrameTest3 {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(new Dimension(500,350));
+		frame.setLocation(new Point(200,100));
+		frame.setTitle("GridLayout Page");
+		frame.setIconImage(new ImageIcon("src\\car.jpg").getImage());
+		
+		frame.setLayout(new GridLayout());
+		
+		JButton btnLogin = new JButton();
+		btnLogin.setText("Login");
+		btnLogin.setBackground(Color.red);
+		
+		frame.add(btnLogin);	
+		
+		JButton btnCancel = new JButton();
+		btnCancel.setText("Cancel");
+		btnCancel.setBackground(Color.green);
+		
+		frame.add(btnCancel);
+		
+		JLabel lbl = new JLabel();
+		lbl.setText("Hello World");
+		lbl.setForeground(Color.RED);
+		frame.add(lbl);
+		
+		JButton btnok = new JButton();
+		btnok.setText("OK");
+		btnok.setBackground(Color.blue);
+		frame.add(btnok);
+	
+
+	}
+
+}

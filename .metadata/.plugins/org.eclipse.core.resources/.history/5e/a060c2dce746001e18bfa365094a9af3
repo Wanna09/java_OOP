@@ -1,0 +1,95 @@
+package SwingDesignerTest;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.JPasswordField;
+
+public class LoginForm extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JPasswordField passwordField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LoginForm frame = new LoginForm();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public LoginForm() {
+		setTitle("Login Page");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\hp\\Pictures\\car.jpg"));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 558, 417);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("User Name");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel.setBounds(112, 40, 99, 27);
+		contentPane.add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(193, 40, 170, 25);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Password");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel_1.setBounds(112, 91, 73, 34);
+		contentPane.add(lblNewLabel_1);
+		
+		JButton btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
+		btnLogin.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		btnLogin.setBounds(112, 156, 90, 34);
+		contentPane.add(btnLogin);
+		
+		JButton btnCancel = new JButton("Cancel");
+		btnCancel.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		btnCancel.setBounds(273, 156, 90, 34);
+		contentPane.add(btnCancel);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(193, 94, 170, 27);
+		contentPane.add(passwordField);
+	}
+}
